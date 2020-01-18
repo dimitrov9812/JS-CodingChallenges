@@ -1,0 +1,32 @@
+.wrap{
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid black;
+    text-align: center;
+}
+.flexbox{
+    display: flex;
+    border:1px solid red;
+    padding:10px;
+    justify-content: space-around;
+}
+img{
+    width:250px;
+    height: 300px;
+}
+img:hover{
+    -webkit-box-shadow: 13px 10px 69px 0px cyan;
+    -moz-box-shadow: 13px 10px 69px 0px cyan;
+    box-shadow: 13px 10px 69px 0px cyan;
+}
+#image4:hover{
+    -webkit-box-shadow: 13px 10px 69px 0px red;
+    -moz-box-shadow: 13px 10px 69px 0px red;
+    box-shadow: 13px 10px 69px 0px red;
+}
+#result{
+    padding: 10;
+    font-weight: bold;
+    color: red;
+    vertical-align: middle;     
+}

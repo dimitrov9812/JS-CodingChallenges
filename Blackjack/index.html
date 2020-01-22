@@ -13,20 +13,20 @@
         <h2>
             Blackjack
         </h2>
-        <span id="header text"><h3>Let's Play</h3></span>
+        <h3><span id="header-text">Let's Play</span></h3>
         <div id="play-field-flex">
             <div class="yourSide">
-                <h2>You:<span id="yourResult">0</span></h2>
+                <h2>You: <span id="yourResult">0</span></h2>
             </div>
             <div class="pcSide">
-                <h2>You:<span id="yourResult">0</span></h2>
+                <h2>Dealer: <span id="pcResult">0</span></h2><br>
             </div>
         </div>
         <div id="actions-field-flex">
             <div class="actionButtons">
-                <button class="btn btn-primary">Hit</button>
-                <button class="btn btn-warning">Stand</button>
-                <button class="btn btn-danger">Deal</button>
+                <button id="btn-hit" class="btn btn-primary mr2">Hit</button>
+                <button id="btn-stand" class="btn btn-warning mr2">Stand</button>
+                <button id="btn-deal" class="btn btn-danger mr2">Deal</button>
             </div>
         </div>
         <div id="result-field-flex">
@@ -39,7 +39,7 @@
                     </tr>
                     <tr>
                         <td><span id="wins">0</span></td>
-                        <td><span id="looses">0</span></td>
+                        <td><span id="losses">0</span></td>
                         <td><span id="draws">0</span></td>
                     </tr>
                     
@@ -48,5 +48,6 @@
         </div>
         
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -3,6 +3,9 @@
     width:80%;
     border: 5px solid black;
     text-align: center;
+    -webkit-box-shadow: 10px 10px 48px 0px rgba(0,140,7,1);
+    -moz-box-shadow: 10px 10px 48px 0px rgba(0,140,7,1);
+    box-shadow: 10px 10px 48px 0px rgba(0,140,7,1);
 }
 #play-field-flex, #actions-field-flex, #result-field-flex{
     display: flex;
@@ -11,7 +14,15 @@
     justify-content: space-around;  
     padding: 10px;
 }
+#play-field-flex,#actions-field-flex{
+        background: url('images/background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        color:white;
+}
 .yourSide, .pcSide{
+    flex-wrap: wrap;
+    justify-content: space-around;
     border: 1px solid black;
     width:50%;
     height: 500px;

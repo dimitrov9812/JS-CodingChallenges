@@ -1,0 +1,37 @@
+.wrap{
+    margin: 0 auto;
+    width:80%;
+    border: 5px solid black;
+    text-align: center;
+}
+#play-field-flex, #actions-field-flex, #result-field-flex{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    justify-content: space-around;  
+    padding: 10px;
+}
+.yourSide, .pcSide{
+    border: 1px solid black;
+    width:50%;
+    height: 500px;
+    padding: 10px;
+}
+.actionButtons{
+    padding: 10px;
+    border: 1px solid black;
+}
+.resultTable{
+    padding:10px;
+}
+#results{
+    border-style: solid; 
+    border-width: 5px; 
+    border-color: #8ebf42;
+    background-color: #d9d9d9;
+}
+tr,td,th{
+    padding: 10px;
+    border: 1px solid #8ebf42;
+}
+

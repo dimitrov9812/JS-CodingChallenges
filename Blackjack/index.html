@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <h2>
+            Blackjack
+        </h2>
+        <span id="header text"><h3>Let's Play</h3></span>
+        <div id="play-field-flex">
+            <div class="yourSide">
+                <h2>You:<span id="yourResult">0</span></h2>
+            </div>
+            <div class="pcSide">
+                <h2>You:<span id="yourResult">0</span></h2>
+            </div>
+        </div>
+        <div id="actions-field-flex">
+            <div class="actionButtons">
+                <button class="btn btn-primary">Hit</button>
+                <button class="btn btn-warning">Stand</button>
+                <button class="btn btn-danger">Deal</button>
+            </div>
+        </div>
+        <div id="result-field-flex">
+            <div class="resultTable">
+                <table id="results">
+                    <tr>
+                        <th>Wins</th>
+                        <th>Looses</th>
+                        <th>Draws</th>
+                    </tr>
+                    <tr>
+                        <td><span id="wins">0</span></td>
+                        <td><span id="looses">0</span></td>
+                        <td><span id="draws">0</span></td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

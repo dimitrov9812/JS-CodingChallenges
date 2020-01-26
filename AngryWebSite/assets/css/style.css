@@ -1,0 +1,761 @@
+* {
+    margin: 0;
+} 
+body{   
+    font: "Courier New", Courier, monospace;
+    font-weight: bold;
+}
+  
+.bg-image{
+    position: absolute;
+    margin-top:-2%;
+    background-image: url("../images/nature.jpg");
+    z-index: 30;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    width: 100%;
+    height: 1200px;
+    padding-top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sticky-links{
+    margin-top: 5%;
+    position: fixed;
+    z-index: 51;
+    text-align: center;
+    
+    text-shadow: 2px 2px black;
+}
+a{
+  color:white;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover{
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+}
+
+#youtube-link{
+    width: 8%;
+    margin-top:15%;
+    position: fixed;
+    z-index: 51;
+    margin-left: -20px;
+    padding: 10px;
+    background-color: black;
+    border-radius: 20px;
+    text-align: center;
+    color:red;
+    font-size: 20px;
+    transition:background-color 0.5s ease-in-out;
+    transition:width 0.5s ease-in-out;
+}
+#youtube-link:hover{
+    width:10%;
+    background-color: red;
+    -webkit-box-shadow: 6px 7px 65px -1px rgba(255,255,255,1);
+    -moz-box-shadow: 6px 7px 65px -1px rgba(255,255,255,1);
+    box-shadow: 6px 7px 65px -1px rgba(255,255,255,1);
+}
+#github-link{
+    width: 8%;
+    margin-top:11%;
+    position: fixed;
+    z-index: 51;
+    margin-left: -20px;
+    padding: 10px;
+    background-color:red;
+    border-radius: 20px;
+    color:white;
+    font-size: 20px;
+    transition:background-color 0.5s ease-in-out;
+    transition:width 0.5s ease-in-out;
+}
+#github-link:hover{
+    width:10%;
+    background-color:black;
+    -webkit-box-shadow: 6px 7px 65px -1px rgba(255,255,255,1);
+    -moz-box-shadow: 6px 7px 65px -1px rgba(255,255,255,1);
+    box-shadow: 6px 7px 65px -1px rgba(255,255,255,1);
+}
+
+.wrapper{
+    z-index: 50;
+    margin: 0 auto;
+    margin-top: 1%;
+    width: 80%;
+    height: 1000px;
+    padding-top: 5%;
+    text-shadow: 2px 2px black;
+}
+
+.heading{
+    text-align: center;
+    position: relative;
+    z-index: 50;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+#navbar-top{
+    background: linear-gradient(-90deg,lightgrey,rgba(211, 211, 211, 0.418),rgba(255, 255, 255, 0),rgba(255, 255, 255, 0),rgba(211, 211, 211, 0.418),lightgrey);
+    position: fixed; 
+    z-index: 51; 
+    width: 100%;
+    margin-top: 1%;  
+    height: 50px;
+    text-decoration: none;
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 17px 40px 4px rgba(69,37,69,1);
+    -moz-box-shadow: 0px 17px 40px 4px rgba(69,37,69,1);
+    box-shadow: 0px 17px 40px 4px rgba(69,37,69,1);
+}
+
+#menu-item{
+    margin-top: 13px;
+    margin-right: 40px;
+    float:right;
+    cursor: pointer;
+    transition:transform .3s ease-in-out;
+}
+#menu-item:hover{
+    transform: scale(1.5);
+}
+#login{
+    width: 5%;
+    cursor: pointer;
+    margin-top: 13px;
+    margin-left: 40px;
+    transition:transform .2s ease-in-out;
+}
+  
+#login .mytext{
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 25%;
+  margin-left: -60px;
+ }
+ #login {
+    position: relative;
+    display: inline-block;
+ }
+ .mytext:after {
+    content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+ }
+ #content{
+    position: relative;
+    z-index: 50;
+    /*box-shadow: inset 0 0 0 3000px rgba(255,255,255,0.3);*/
+    border-radius: 2%;
+    margin: 0 auto;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+ #login:hover .mytext {
+    visibility: visible;
+ }
+
+ .math-box, .math-box-wrap{
+    border-radius: 2%;
+    align-items: center;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 1%;
+    width: 30%;
+    height: 45%;
+    text-align: center;
+    color:white;
+
+ }
+
+ #inside-math-box2{
+   width:50%;
+   height: 100px;
+   padding-top: 20%;
+ }
+
+ #search-field{
+   width:80%;
+   height:50px;
+ }
+ #search-button{
+   margin: 5px;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+ }
+ #search-button:hover {
+  background: #0b7dda;
+}
+
+ #search-image{
+   width:30px;
+ }
+ #google-search-text{
+   font-size: 30px;
+ }
+ #search-image:hover{
+   color:white;
+ }
+ #coloring-box-1, #coloring-box-2, #coloring-box-3{
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.2),rgba(250, 250, 250, 0.3),rgba(255, 255, 255, 0.3),rgba(2, 2, 2, 0.2),rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)); 
+ }
+ #coloring-box-4, #coloring-box-5, #coloring-box-6{
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.2),rgba(250, 250, 250, 0.3),rgba(255, 255, 255, 0.3),rgba(2, 2, 2, 0.2),rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)); 
+ }
+ #coloring-box-1{
+   order:1;
+ }
+ #coloring-box-2{
+  order:2;
+}
+#coloring-box-3{
+  padding-top: 5%;
+  order:3;
+}
+#coloring-box-4{
+  order:4;
+  translate: opacity 1s ease-in-out;
+}
+#coloring-box-5{
+  order:5;
+}
+#coloring-box-6{
+  order:6;
+}
+ #inside-math-box{
+     width: 100%;
+     height: 90%;
+     align-items: center;
+ }
+ #inside-math-box2{
+    width: 100%;
+    height: 90%;
+    align-items: center;
+    color: black;
+    text-shadow:none;
+ }
+#box-text{
+    font-size: 15px;
+    font-weight: bolder;
+}
+#result{
+    visibility: visible;
+}
+#firstNumber, #secondNumber{
+    width:80%;
+    margin: 1%;
+}
+#selectFunction{
+    margin: 5%;
+}
+#resultButton{
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+    margin:5%;
+    width:80%;
+}
+#resultButton:hover{
+    background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+.colorButton{
+    width: 30%;
+}
+/*buttons styling =================================================================================================================*/
+#color-button1{
+    margin: 2%;
+    box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+#color-button1:hover{
+    background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+#color-button1:active, #color-button2:active, #color-button3:active, #color-button4:active {
+	position:relative;
+	top:1px;
+}
+#color-button2{
+    box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+	background:linear-gradient(to bottom, #637aad 5%, #5972a7 100%);
+	background-color:#637aad;
+	border:1px solid #314179;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+}
+#color-button2:hover{
+    background:linear-gradient(to bottom, #5972a7 5%, #637aad 100%);
+	background-color:#5972a7;
+}
+
+#color-button3{
+    box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+#color-button3:hover{
+    background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	  background-color:#ffab23;
+}
+
+#color-button4{
+    box-shadow: 3px 4px 0px 0px #899599;
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	background-color:#ededed;
+	border-radius:15px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#3a8a9e;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+#color-button4:hover{
+    background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	background-color:#bab1ba;
+}
+/*========================================================================================================================================*/
+
+
+
+
+/*STYLING EACH BOX=========================================================================================================================*/
+.custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background-color: DodgerBlue;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent rgb(255, 255, 255) transparent;
+    top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: #1dd2ff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+.marioSpace{
+    width: 98%;
+    margin:1%;
+    height: 100%;
+}
+#map{
+    position: relative;
+    margin-top: 7%;
+    width:100%;
+    max-height:100%; 
+}
+/*========================================================================================================================================*/
+
+
+/*ROCK PAPER SCISSORS*/
+#images{
+    width:100px;
+    height: 100px;
+    transition: transform 0.5s ease-in-out;
+}
+#images:hover{
+    -webkit-box-shadow: 13px 10px 69px 0px cyan;
+    -moz-box-shadow: 13px 10px 69px 0px cyan;
+    box-shadow: 13px 10px 69px 0px cyan;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.flexbox{
+    display: flex;
+    height: 50%;
+    margin-top: 8%;
+    padding:20px;
+    justify-content: space-around;
+}
+#image4:hover{
+    -webkit-box-shadow: 13px 10px 69px 0px red;
+    -moz-box-shadow: 13px 10px 69px 0px red;
+    box-shadow: 13px 10px 69px 0px red;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+#image4{
+    width:100px;
+    height: 100px;
+    transition: transform 0.5s ease-in-out;
+    
+}
+#result{
+    padding: 10;
+    font-weight: bold;
+    color: red;
+    vertical-align: middle;     
+}
+#inside-math-box-final{
+    margin-top: 15%;
+    width: 100%;
+    height: 90%;
+}
+#final-text{
+    font-size: 30px;
+    margin-bottom: 2px;
+}
+.switch{
+    position: relative;
+    height: 100px;
+    width: 240px;
+    margin-left: 20%;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  }
+  
+  .switch-label {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 55px;
+    line-height: 90px;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+  }
+  .switch-label:active {
+    font-weight: bold;
+  }
+  
+  .switch-label-off {
+    padding-left: 35px;
+    padding-top: 5px;
+  }
+  
+  .switch-label-on {
+    position: absolute;
+    padding-top: 5px;
+    padding-right: 2px;
+    margin-left: 3px;
+  }
+  
+  
+  .switch-input, .switch-input2 {
+    display: none;
+  }
+  .switch-input:checked + .switch-label {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.65);
+    text-shadow: 0 1px rgba(255, 255, 255, 0.25);
+    -webkit-transition: 0.15s ease-out;
+    -moz-transition: 0.15s ease-out;
+    -ms-transition: 0.15s ease-out;
+    -o-transition: 0.15s ease-out;
+    transition: 0.15s ease-out;
+    -webkit-transition-property: color, text-shadow;
+    -moz-transition-property: color, text-shadow;
+    -ms-transition-property: color, text-shadow;
+    -o-transition-property: color, text-shadow;
+    transition-property: color, text-shadow;
+  }
+  .switch-input:checked + .switch-label-on ~ .switch-selection {
+    left: 120px;
+    /* Note: left: 50%; doesn't transition in WebKit */
+  }
+  
+  .switch-selection {
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    display: block;
+    width: 120px;
+    height: 98px;
+    border-radius: 3px;
+    background-color: #65bd63;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9dd993), color-stop(100%, #65bd63));
+    background-image: -webkit-linear-gradient(top, #9dd993, #65bd63);
+    background-image: -moz-linear-gradient(top, #9dd993, #65bd63);
+    background-image: -ms-linear-gradient(top, #9dd993, #65bd63);
+    background-image: -o-linear-gradient(top, #9dd993, #65bd63);
+    background-image: linear-gradient(top, #9dd993, #65bd63);
+    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+    -webkit-transition: left 0.15s ease-out;
+    -moz-transition: left 0.15s ease-out;
+    -ms-transition: left 0.15s ease-out;
+    -o-transition: left 0.15s ease-out;
+    transition: left 0.15s ease-out;
+  }
+  .switch-blue .switch-selection {
+    background-color: #3aa2d0;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4fc9ee), color-stop(100%, #3aa2d0));
+    background-image: -webkit-linear-gradient(top, #4fc9ee, #3aa2d0);
+    background-image: -moz-linear-gradient(top, #4fc9ee, #3aa2d0);
+    background-image: -ms-linear-gradient(top, #4fc9ee, #3aa2d0);
+    background-image: -o-linear-gradient(top, #4fc9ee, #3aa2d0);
+    background-image: linear-gradient(top, #4fc9ee, #3aa2d0);
+  }
+  .switch-yellow .switch-selection {
+    background-color: #c4bb61;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e0dd94), color-stop(100%, #c4bb61));
+    background-image: -webkit-linear-gradient(top, #e0dd94, #c4bb61);
+    background-image: -moz-linear-gradient(top, #e0dd94, #c4bb61);
+    background-image: -ms-linear-gradient(top, #e0dd94, #c4bb61);
+    background-image: -o-linear-gradient(top, #e0dd94, #c4bb61);
+    background-image: linear-gradient(top, #e0dd94, #c4bb61);
+  }
+
+#returnButton{
+    margin: 0 auto;
+    position: absolute;
+    margin-left: 35%;
+    width: 30%;
+    height: 300px;
+    top:300px;
+    font-size: 150px;
+}
+
+/*=================================================================================================================SWITCH BUTTON IN JS*/
+#div{
+    margin-left: 40%;
+    margin-top:12%;
+}
+.switch2{
+    position: relative;
+    height: 100px;
+    width: 240px;
+    margin-left: 20%;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  }
+  
+  .switch-label2 {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 55px;
+    line-height: 90px;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+  }
+  .switch-label2:active {
+    font-weight: bold;
+  }
+  
+  .switch-label-off2 {
+    padding-left: 35px;
+    padding-top: 5px;
+  }
+  
+  .switch-label-on2 {
+    position: absolute;
+    padding-top: 5px;
+    margin-left: 40%;
+  }
+  
+  
+  .switch-input2{
+    display: none;
+  }
+  .switch-input2:checked + .switch-label2 {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.65);
+    text-shadow: 0 1px rgba(255, 255, 255, 0.25);
+    -webkit-transition: 0.15s ease-out;
+    -moz-transition: 0.15s ease-out;
+    -ms-transition: 0.15s ease-out;
+    -o-transition: 0.15s ease-out;
+    transition: 0.15s ease-out;
+    -webkit-transition-property: color, text-shadow;
+    -moz-transition-property: color, text-shadow;
+    -ms-transition-property: color, text-shadow;
+    -o-transition-property: color, text-shadow;
+    transition-property: color, text-shadow;
+  }
+  .switch-input2:checked + .switch-label-on2 ~ .switch-selection2 {
+    left: 120px;
+    /* Note: left: 50%; doesn't transition in WebKit */
+  }
+  
+  .switch-selection2 {
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    display: block;
+    width: 120px;
+    height: 98px;
+    border-radius: 3px;
+    background-color: #65bd63;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9dd993), color-stop(100%, #65bd63));
+    background-image: -webkit-linear-gradient(top, #9dd993, #65bd63);
+    background-image: -moz-linear-gradient(top, #9dd993, #65bd63);
+    background-image: -ms-linear-gradient(top, #9dd993, #65bd63);
+    background-image: -o-linear-gradient(top, #9dd993, #65bd63);
+    background-image: linear-gradient(top, #9dd993, #65bd63);
+    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+    -webkit-transition: left 0.15s ease-out;
+    -moz-transition: left 0.15s ease-out;
+    -ms-transition: left 0.15s ease-out;
+    -o-transition: left 0.15s ease-out;
+    transition: left 0.15s ease-out;
+  }
+  .switch-blue2 .switch-selection2{
+    background-color: #3aa2d0;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4fc9ee), color-stop(100%, #3aa2d0));
+    background-image: -webkit-linear-gradient(top, #4fc9ee, #3aa2d0);
+    background-image: -moz-linear-gradient(top, #4fc9ee, #3aa2d0);
+    background-image: -ms-linear-gradient(top, #4fc9ee, #3aa2d0);
+    background-image: -o-linear-gradient(top, #4fc9ee, #3aa2d0);
+    background-image: linear-gradient(top, #4fc9ee, #3aa2d0);
+  }
+  .switch-yellow2 .switch-selection2 {
+    background-color: #c4bb61;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e0dd94), color-stop(100%, #c4bb61));
+    background-image: -webkit-linear-gradient(top, #e0dd94, #c4bb61);
+    background-image: -moz-linear-gradient(top, #e0dd94, #c4bb61);
+    background-image: -ms-linear-gradient(top, #e0dd94, #c4bb61);
+    background-image: -o-linear-gradient(top, #e0dd94, #c4bb61);
+    background-image: linear-gradient(top, #e0dd94, #c4bb61);
+  }
+
+  #retryText{
+      color: white;
+      font-weight: bold;
+      font-size: 26px;
+  }
+
+  #retry-div{
+      position: absolute;
+      margin-left: 20%;
+      bottom: 20%;
+      width: 60%;
+      height: 40%;
+  }
+/*=================================================================================================================SWITCH BUTTON IN JS*/

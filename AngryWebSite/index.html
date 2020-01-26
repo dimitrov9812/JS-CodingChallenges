@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet"" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div-body">
+        <div class="bg-image" id="bg-image"></div>
+        <div id="navbar-top">
+            <div id="menu-item">
+                <span>Home</span>
+            </div>
+            <div id="menu-item">
+                <span>About</span>
+            </div>
+            <div id="menu-item">
+                <span>Contacts</span>
+            </div >
+            <div id = "login">Login
+                <span class = "mytext"> This isn't actuially <a href="index.html" id="hidden-page">working</a>, try some other functions.</span>
+            </div>
+        </div>
+        <div class="sticky-links">
+            <div id="youtube-link">
+                <a href="https://github.com/" id="y-link">YouTube</a>
+            </div>
+            <div id="github-link">
+                <a href="https://www.youtube.com/" id="g-link">GitHub</a>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="heading">
+                In this simple website you can <span id='text-to-change-1'>test what i have learned!</span><br>
+                        I hope at least something works :)
+            </div> 
+            <div id="content">
+                <div class="math-box" id="coloring-box-1">
+                    <span id="box-text">Here we will choose a math funcion and perform it!</span>
+                    <div id="inside-math-box">
+                        <div id="selectFunction">
+                            <select name="function" id='selectedFunction' class="custom-select">
+                                <option value="add">Add</option>
+                                <option value="subtract">Subtract</option>
+                                <option value="multiply">Multiply</option>
+                                <option value="divide">Divide</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type='text' id="firstNumber">
+                        </div>
+                        <div>
+                            <input type='text' id="secondNumber">
+                        </div>
+                        <div>
+                            <input type='button' class='calculateButton btn btn-success' id="resultButton"value="CALCULATE"><br>
+
+                            <span id="result">Your result will appear here...Probably.</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="math-box" id="coloring-box-2">
+                    <div id="inside-math-box2">
+                        <span id="google-search-text">Try my google search!</span>
+                        <input type='text' placeholder="search..." id='search-field'><br>
+                        <button type="submit" id='search-button'><img src="assets/images/search.png" id='search-image'></img></button>
+                        
+                    </div>
+                </div>
+                <div  class="math-box" id="coloring-box-3">
+                    <div id="inside-math-box">
+                        Change button colors!
+                        <div>
+                            <input type='button' class='colorButton' id="color-button1"value="Hello">
+                            <input type='button' class='colorButton' id="color-button2"value="User"><br>
+                            <input type='button' class='colorButton' id="color-button3"value="Choose">   
+                            <input type='button' class='colorButton' id="color-button4"value="Color">
+                        </div>
+                    </div>
+                    
+                </div >
+                <div class="math-box" id="coloring-box-4">
+                    <div class="marioSpace" id="marioSpace">
+                            <img src="assets/images/map.jpg" id='map'>
+                    </div>
+                </div>
+                <div class="math-box-wrap" id="coloring-box-5">
+                    <div id="inside-math-box"> 
+                        Rock, Paper, Scissors<br>
+                        or at least kind of..
+                        <div class="flexbox" id="fx-box">
+                            <div>
+                                <img src="assets/images/rock.jpg" onclick="Rock()" id="images">
+                            </div> 
+                            <div >
+                                <img src="assets/images/paper.jpg" onclick="Paper()" id="images">
+                            </div>  
+                            <div >
+                                <img src="assets/images/scissors.jpg" onclick="Scissors()"id="images">
+                            </div>
+                        </div>
+                        
+                        <div class="flexbox" >    
+                            <div id="ourChoice">    
+                
+                            </div>
+                            <div id="CombatResult">    
+                
+                            </div>
+                            <div id="computerChoice">    
+                
+                            </div>
+                        </div>    
+                    </div>
+                    
+                </div>
+                <div class="math-box" id="coloring-box-6">
+                    <div id="inside-math-box-final" >
+                        <div id="final-text">
+                            Do you like my website?
+                        </div>
+                        <div class="switch">
+                            <input type="radio" class="switch-input" name="view" value="week" id="week" checked>
+                            <label for="week" class="switch-label switch-label-off">YES!</label>
+                            <input type="radio" class="switch-input" name="view" value="month" id="month">
+                            <label for="month" class="switch-label switch-label-on">NO!</label>
+                            <span class="switch-selection"></span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</body>
+</html>

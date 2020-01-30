@@ -1,0 +1,133 @@
+body{
+    background-image: url("../images/wallpaper.jfif");
+    background-size: cover;
+}
+.wrap{
+    border:1px solid black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.menu{
+    border:1px solid black;
+    width: 20%;
+    height: 90vh;
+    margin:2%;
+    margin-top: 2.5%;
+}
+.actions{
+    border:1px solid black;
+    width:60%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top:4%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.map-space{
+    border:1px solid black;
+    width:70%;
+    height: 90vh;
+    margin: 2.5%;
+    display: flex;
+    flex-direction: column;
+}
+.button{
+    width: 20%;
+    height: 10vh;
+    margin: 2.5%;
+}
+.map{
+    border:1px solid black;
+    width: 90%;
+    height:60vh;
+    margin: 5%;
+}
+#map-tile-space-player-1,#map-tile-space-player-2,#map-tile-space-player-3,#map-tile-space-player-4{
+    height: 60px;
+    margin-top: 6%;
+    display: flex;
+    flex-direction: row;
+    border:1px solid black;
+}
+#choose-players{
+    border: 1px solid black;
+    width: 80%;
+    margin:0 auto;
+    margin-top:13%;
+    height:20vh;
+}
+#stats{
+    border:1px solid black;
+    width: 80%;
+    margin: 0 auto;
+    margin-top:10%;
+    height: 59.8vh;
+    display: flex;
+    flex-direction: column;
+}
+#select-players,#start{
+    width: 90%;
+    margin:4%;
+    margin-bottom:20%;
+    height: 5vh;
+}
+.player-stats-field{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border:1px solid black;
+    height:15vh;
+}
+.player-image{
+    border:1px solid black;
+    width: 40%;
+    height: 12vh;
+    margin-top:2%;
+    margin-left:2%;
+}
+.player-stats{
+    border:1px solid black;
+    width: 50%;
+    height: 11vh;
+    margin-left:2%;
+    
+}
+#player-1{
+    visibility: hidden;
+}
+#player-2{
+    visibility: hidden;
+}
+#player-3{
+    visibility: hidden;
+}
+#player-4{
+    visibility: hidden;
+}
+#logo{
+    width:300px;
+    height:200px;
+}
+.cells{
+    width: 50px;
+    height: 61px;
+    background-image: url('../images/grass.jpg');
+    background-size: cover;
+}
+
+#player1,#player2,#player3,#player4{
+    height: 100px;
+    width: 50px;
+    
+}
+#placePlayers{
+    position: absolute;
+    left: 900px;
+    top:2px;
+}

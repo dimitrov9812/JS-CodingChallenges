@@ -1,5 +1,5 @@
 body{
-    background-image: url("../images/wallpaper.jfif");
+    background-image: url("../images/wallpaper.png");
     background-size: cover;
 }
 .wrap{
@@ -53,7 +53,7 @@ body{
     margin-top: 2%;
     display: flex;
     flex-direction: row;
-    border:1px solid black;
+    border:3px solid white;
     
 }
 #choose-players{
@@ -73,11 +73,23 @@ body{
     display: flex;
     flex-direction: column;
 }
-#select-players,#start{
+#select-players{
     width: 90%;
     margin:4%;
-    margin-bottom:20%;
+    margin-bottom:2%;
     height: 5vh;
+}
+#start{
+    margin-left: 23%;
+    width: 50%;
+    height: 150px;
+    transition: all 0.4s ease-in-out;
+}
+#start:hover{
+    margin-left: 20%;
+    width: 60%;
+    height: 150px;
+    transform: scaleX(1.2);
 }
 .player-stats-field{
     display: flex;
@@ -124,10 +136,11 @@ body{
 }
 
 #player1,#player2,#player3,#player4{
-    height: 100px;
+    height: 80px;
     width: 50px;
     
 }
+
 #placePlayers{
     position: absolute;
     left: 900px;
@@ -142,4 +155,160 @@ body{
 }
 .input-text-name{
     width: 90%;
+}
+#button-4 {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:6px 24px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #854629;
+    transition: all 0.4s ease-in-out;
+}
+#button-4:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+    border-radius: 30px;
+}
+#button-4:active {
+	position:relative;
+	top:1px;
+}
+#button-2{
+	box-shadow:inset 0px 1px 0px 0px #9acc85;
+	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	background-color:#74ad5a;
+	border:1px solid #3b6e22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:6px 12px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #3b6e22;
+    transition: all 0.4s ease-in-out;
+}
+#button-2:hover {
+	background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+    background-color:#68a54b;
+    border-radius: 30px;
+}
+#button-2:active {
+	position:relative;
+	top:1px;
+}
+#button-3 {
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+    text-shadow:0px -1px 0px #2b665e;
+    transition: all 0.4s ease-in-out;
+}
+#button-3:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+    border-radius: 30px;
+}
+#button-3:active {
+	position:relative;
+	top:1px;
+}
+#button-1 {
+	box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+	background:linear-gradient(to bottom, #637aad 5%, #5972a7 100%);
+	background-color:#637aad;
+	border:1px solid #314179;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:6px 12px;
+    text-decoration:none;
+    transition: all 0.4s ease-in-out;
+}
+#button-1:hover {
+	background:linear-gradient(to bottom, #5972a7 5%, #637aad 100%);
+	background-color:#5972a7;
+    border-radius: 30px;
+}
+#button-1:active {
+	position:relative;
+	top:1px;
+}
+
+.select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}    
+.select select {
+        font-family: 'Arial';
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        padding: 13px 12px;
+        outline: 0;
+        border: 0px solid #000000;
+        border-radius: 19px;
+        background: #e6e6e6;
+        color: #7b7b7b;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+        
+    .select select::-ms-expand {
+            display: none;
+        }
+        .select select:hover,
+        .select select:focus {
+            color: #000000;
+            background: #cccccc;
+        }
+        .select select:disabled {
+            opacity: 0;
+            pointer-events: none;
+        }
+.select_arrow {
+    position: absolute;
+    top: 32px;
+    right: 30px;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0px 5px;
+    border-color: #7b7b7b transparent transparent transparent;
+}
+.select select:hover ~ .select_arrow,
+.select select:focus ~ .select_arrow {
+    border-top-color: #000000;
+}
+.select select:disabled ~ .select_arrow {
+    border-top-color: #cccccc;
+}
+        
+
+#current-turn{
+    color: white;
+    text-shadow: 1px solid black;
 }

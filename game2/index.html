@@ -11,8 +11,8 @@
 <body>
     <div class='wrap' id='wrap'>
         <div class='menu' id='menu'>
-            <div class='choose-players' id='choose-players'>
-                <select id='select-players'>
+            <div class='select' id='choose-players'>
+                <select  id='select-players'>
                     <option>
                         2
                     </option>
@@ -23,7 +23,9 @@
                         4
                     </option>
                 </select>
-                <input type="button" name="start" id="start" value='start'>
+                <div class="select_arrow">
+                </div>
+               <img id='start' src='assets/images/button.png'>
             </div>
             <div class='stats' id="stats">
                 <div class="player-stats-field"id="player-1">
@@ -75,10 +77,10 @@
             
             <input type="button" id='placePlayers' class='button' value='Place Players on board'>
             <div class='actions' id='actions'>
-                <input type="button" id='button-1' class='button' value='challenge'>
-                <input type="button" id='button-2' class='button' value='safe'>
-                <input type="button" id='button-3' class='button' value='hook'>
-                <input type="button" id='button-4' class='button' value='risky'>
+                <input type="button" id='button-1' class='button' value='CHALLENGE'>
+                <input type="button" id='button-2' class='button' value='SAFE'>
+                <input type="button" id='button-3' class='button' value='HOOK'>
+                <input type="button" id='button-4' class='button' value='RISKY'>
             </div>
             <h3 id='current-turn'>TURN: 1</h3>
             <div class='map' id='map'>

@@ -17,20 +17,20 @@ document.querySelector('#button-4').addEventListener('click',checkRisky);
 document.querySelector('#placePlayers').addEventListener('click',placePlayers);
 
 var player1 = document.createElement('img');
-    player1.src = '//assets/images/mario.png'
-    player1.setAttribute('id','player1')
+    player1.setAttribute('id','player1');
+    player1.src = '/assets/images/player.png';
 
 var player2 = document.createElement('img');
-    player2.src = '//assets/images/mario.png'
-    player2.setAttribute('id','player2')
+    player2.setAttribute('id','player2');
+    player2.src = '/assets/images/player.png';
     
 var player3 = document.createElement('img');
-    player3.src = '//assets/images/mario.png'
-    player3.setAttribute('id','player3')
+    player3.setAttribute('id','player3');
+    player3.src = '/assets/images/player.png';
 
 var player4 = document.createElement('img');
-    player4.src = '//assets/images/mario.png'
-    player4.setAttribute('id','player4')
+    player4.setAttribute('id','player4');
+    player4.src = '/assets/images/player.png';
 
 
 function startGame(){
@@ -101,6 +101,26 @@ function drawMap(num){
 }   
 function placePlayers(){
     getPlayerNames();
+    if(p1name == '' || p2name == '' || p3name == '' ||p4name == ''){
+        alert('Please select a name for all the players');
+        location.reload();
+    }
+    if(p1name == p2name || p1name == p3name ||p1name == p4name){
+        alert('Please select a different names for all the players');
+        location.reload();
+    }
+    if(p2name == p1name || p2name == p3name ||p2name == p4name){
+        alert('Please select a different names for all the players');
+        location.reload();
+    }
+    if(p3name == p1name || p3name == p2name ||p3name == p4name){
+        alert('Please select a different names for all the players');
+        location.reload();
+    }
+    if(p4name == p1name || p4name == p2name ||p4name == p3name){
+        alert('Please select a different names for all the players');
+        location.reload();
+    }
     switch(playersCreated){
         case 2:
             document.getElementById('cell1-0').appendChild(player1);

@@ -35,6 +35,7 @@ body{
     margin: 2.5%;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 .button{
     width: 20%;
@@ -45,14 +46,15 @@ body{
     border:1px solid black;
     width: 90%;
     height:60vh;
-    margin: 5%;
+    margin: 2%;
 }
 #map-tile-space-player-1,#map-tile-space-player-2,#map-tile-space-player-3,#map-tile-space-player-4{
-    height: 60px;
-    margin-top: 6%;
+    height: 100px;
+    margin-top: 2%;
     display: flex;
     flex-direction: row;
     border:1px solid black;
+    
 }
 #choose-players{
     border: 1px solid black;
@@ -61,6 +63,7 @@ body{
     margin-top:13%;
     height:20vh;
 }
+
 #stats{
     border:1px solid black;
     width: 80%;
@@ -117,7 +120,6 @@ body{
 .cells{
     width: 50px;
     height: 61px;
-    background-image: url('../images/grass.jpg');
     background-size: cover;
 }
 
@@ -130,4 +132,14 @@ body{
     position: absolute;
     left: 900px;
     top:2px;
+}
+#inside-image{
+    width:100%;
+}
+.upload-image{
+    width:70%;
+    padding: 11%;
+}
+.input-text-name{
+    width: 90%;
 }

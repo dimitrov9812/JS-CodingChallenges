@@ -100,37 +100,64 @@ function placePlayers(){
     document.getElementById('actions').style.visibility='visible';
 
     getPlayerNames();
-    if(p1name == '' || p2name == '' || p3name == '' ||p4name == ''){
-        alert('Please select a name for all the players');
-        location.reload();
-    }
-    if(p1name == p2name || p1name == p3name ||p1name == p4name){
-        alert('Please select a different names for all the players');
-        location.reload();
-    }
-    if(p2name == p1name || p2name == p3name ||p2name == p4name){
-        alert('Please select a different names for all the players');
-        location.reload();
-    }
-    if(p3name == p1name || p3name == p2name ||p3name == p4name){
-        alert('Please select a different names for all the players');
-        location.reload();
-    }
-    if(p4name == p1name || p4name == p2name ||p4name == p3name){
-        alert('Please select a different names for all the players');
-        location.reload();
-    }
     switch(playersCreated){
         case 2:
+            if(p1name == '' || p2name == ''){
+                alert('Please select a name for all the players');
+                location.reload();
+            }
+            if(p1name == p2name){
+                alert('Please select a different names for all the players');
+                location.reload();
+            }
             document.getElementById('cell1-0').appendChild(player1);
             document.getElementById('cell2-0').appendChild(player2);
+            document.getElementById('map-tile-space-player-3').style.visibility='hidden';
+            document.getElementById('map-tile-space-player-4').style.visibility='hidden';
         break;
         case 3:
+            if(p1name == '' || p2name == '' || p3name == ''){
+                alert('Please select a name for all the players');
+                location.reload();
+            }
+            if(p1name == p2name || p1name == p3name){
+                alert('Please select a different names for all the players');
+                location.reload();
+            }
+            if(p2name == p1name || p2name == p3name){
+                alert('Please select a different names for all the players');
+                location.reload();
+            }
+            if(p3name == p1name || p3name == p2name){
+                alert('Please select a different names for all the players');
+                location.reload();
+            }
             document.getElementById('cell1-0').appendChild(player1);
             document.getElementById('cell2-0').appendChild(player2);
             document.getElementById('cell3-0').appendChild(player3);
+            document.getElementById('map-tile-space-player-4').style.visibility='hidden';
         break;
         case 4:
+            if(p1name == '' || p2name == '' || p3name == '' || p4name == ''){
+                alert('Please select a name for all the players');
+                location.reload();
+            }
+            if(p1name == p2name || p1name == p3name || p1name == p4name){
+                alert('Please select a different names for all the players');
+                location.reload();
+            }
+            if(p2name == p1name || p2name == p3name || p2name == p4name){
+                alert('Please select a different names for all the players');
+                location.reload();
+            }
+            if(p3name == p1name || p3name == p2name || p3name == p4name){
+                alert('Please select a different names for all the players');
+                location.reload();
+            }
+            if(p4name == p1name || p4name == p2name || p4name == p3name){
+                alert('Please select a different names for all the players');
+                location.reload();
+            }
             document.getElementById('cell1-0').appendChild(player1);
             document.getElementById('cell2-0').appendChild(player2);
             document.getElementById('cell3-0').appendChild(player3);
@@ -485,8 +512,9 @@ function safe(turn,player){
             var nextNum = currentNumber;
             console.log('turn:'+turn);
             console.log('your player will now go in cell1-'+nextNum);
-            
             document.getElementById('cell'+turn+'-'+nextNum).appendChild(player);
+
+            checkFinished();
 }
 function moveChallenge(turn){
     showTurn();
@@ -667,4 +695,138 @@ function readURL4(input) {
 
 function showTurn(){
     document.getElementById('current-turn').innerHTML = 'TURN: '+turn;
+    switch(turn){
+        case 1:
+            document.getElementById('map-tile-space-player-1').style.border = '3px solid red';
+            document.getElementById('map-tile-space-player-2').style.border = '3px solid white';
+            document.getElementById('map-tile-space-player-3').style.border = '3px solid white';
+            document.getElementById('map-tile-space-player-4').style.border = '3px solid white';
+            document.getElementById('player-1').style.border = '3px solid red';
+            document.getElementById('player-2').style.border = '3px solid white';
+            document.getElementById('player-3').style.border = '3px solid white';
+            document.getElementById('player-4').style.border = '3px solid white';
+            break;
+        case 2:
+            document.getElementById('map-tile-space-player-1').style.border = '3px solid white';
+            document.getElementById('map-tile-space-player-2').style.border = '3px solid red';
+            document.getElementById('map-tile-space-player-3').style.border = '3px solid white';
+            document.getElementById('map-tile-space-player-4').style.border = '3px solid white';
+            document.getElementById('player-1').style.border = '3px solid white';
+            document.getElementById('player-2').style.border = '3px solid red';
+            document.getElementById('player-3').style.border = '3px solid white';
+            document.getElementById('player-4').style.border = '3px solid white';
+            break;
+        case 3:
+            document.getElementById('map-tile-space-player-1').style.border = '3px solid white';
+            document.getElementById('map-tile-space-player-2').style.border = '3px solid white';
+            document.getElementById('map-tile-space-player-3').style.border = '3px solid red';
+            document.getElementById('map-tile-space-player-4').style.border = '3px solid white';
+            document.getElementById('player-1').style.border = '3px solid white';
+            document.getElementById('player-2').style.border = '3px solid white';
+            document.getElementById('player-3').style.border = '3px solid red';
+            document.getElementById('player-4').style.border = '3px solid white';
+            break;
+        case 4:
+            document.getElementById('map-tile-space-player-1').style.border = '3px solid white';
+            document.getElementById('map-tile-space-player-2').style.border = '3px solid white';
+            document.getElementById('map-tile-space-player-3').style.border = '3px solid white';
+            document.getElementById('map-tile-space-player-4').style.border = '3px solid red';
+            document.getElementById('player-1').style.border = '3px solid white';
+            document.getElementById('player-2').style.border = '3px solid white';
+            document.getElementById('player-3').style.border = '3px solid white';
+            document.getElementById('player-4').style.border = '3px solid red';
+            break;
+    }
+}
+
+function checkFinished(){
+    var x =document.getElementById('player1').parentElement.id;
+            console.log('parent element id = ' +x);
+            var numbersInId = x.substring(x.indexOf('-') + 1)
+            console.log('everything after the dash is: '+numbersInId)
+            var player1pos = numbersInId;
+
+    var y =document.getElementById('player2').parentElement.id;
+            console.log('parent element id = ' +y);
+            var numbersInId2 = y.substring(y.indexOf('-') + 1)
+            console.log('everything after the dash is: '+numbersInId)
+            var player2pos = numbersInId2;
+
+            switch(playersCreated){
+                case 2:
+                    if(player1pos == 24){
+                        showWinner(1);
+                    }
+                    else if(player2pos == 24){
+                        showWinner(2);
+                    }
+                    break;
+                case 3:
+                    var z =document.getElementById('player3').parentElement.id;
+                    console.log('parent element id = ' +z);
+                    var numbersInId3 = z.substring(z.indexOf('-') + 1)
+                    console.log('everything after the dash is: '+numbersInId)
+                    var player3pos = numbersInId3;
+                    if(player1pos == 24){
+                        showWinner(1);
+                    }
+                    else if(player2pos == 24){
+                        showWinner(2);
+                    }
+                    else if(player3pos == 24){
+                        showWinner(3);
+                    }
+                    break;
+                case 4:
+                    var z =document.getElementById('player3').parentElement.id;
+                    console.log('parent element id = ' +z);
+                    var numbersInId3 = z.substring(z.indexOf('-') + 1)
+                    console.log('everything after the dash is: '+numbersInId)
+                    var player3pos = numbersInId3;
+
+                    var b =document.getElementById('player4').parentElement.id;
+                    console.log('parent element id = ' +b);
+                    var numbersInId4 = b.substring(b.indexOf('-') + 1)
+                    console.log('everything after the dash is: '+numbersInId)
+                    var player4pos = numbersInId4;
+
+                    if(player1pos == 24){
+                        showWinner(1);
+                    }
+                    else if(player2pos == 24){
+                        showWinner(2);
+                    }
+                    else if(player3pos == 24){
+                        showWinner(3);
+                    }
+                    else if(player4pos == 24){
+                        showWinner(4);
+                    }
+                    break;
+            }
+}
+
+function showWinner(who){
+    document.body.innerHTML = "";
+    document.body.style.backgroundImage = "url(assets/images/wallpaper2.jpg)"; 
+    var newdiv = document.createElement('div');
+    newdiv.setAttribute('id','new-div');
+    document.body.appendChild(newdiv);
+    var text = document.createElement('h1');
+    text.setAttribute('id','winner-text');
+    switch(who){
+        case 1:
+            text.innerHTML = 'The winner is: '+p1name;
+            break;
+        case 2:
+            text.innerHTML = 'The winner is: '+p2name;
+            break;
+        case 3:
+            text.innerHTML = 'The winner is: '+p3name;
+            break;
+        case 4:
+            text.innerHTML = 'The winner is: '+p4name;
+            break;
+    }
+    newdiv.appendChild(text);
 }

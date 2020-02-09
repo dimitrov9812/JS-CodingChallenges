@@ -34,9 +34,10 @@ var player4 = document.createElement('img');
 
 
 function startGame(){
-    
-    document.getElementById('start').remove();
+    document.getElementById('placePlayers').style.visibility='visible';
     var numOfPlayers = document.getElementById('select-players').value;
+    document.getElementById('start').remove();
+    document.getElementById('start-page').remove();
     switch(numOfPlayers){
         case'2':
         document.getElementById('player-1').style.visibility ='visible';
@@ -66,11 +67,6 @@ function startGame(){
         playersCreated=4
         break;
     }
-    document.getElementById('select-players').remove();
-    var logo = document.createElement('img');
-    logo.setAttribute('id','logo');
-    logo.setAttribute('src','assets/images/spiderman.jpg');
-    document.getElementById('choose-players').appendChild(logo);
     turn=1;
 
 }
@@ -100,6 +96,9 @@ function drawMap(num){
     }
 }   
 function placePlayers(){
+    document.getElementById('map-space-place').style.visibility='visible';
+    document.getElementById('actions').style.visibility='visible';
+
     getPlayerNames();
     if(p1name == '' || p2name == '' || p3name == '' ||p4name == ''){
         alert('Please select a name for all the players');
@@ -155,8 +154,8 @@ function getPlayerNames(){
             p2name = player2name;
             document.getElementById('player1-name').remove();
             document.getElementById('player2-name').remove();
-            document.getElementById('player-1-show-name').innerHTML = player1name;
-            document.getElementById('player-2-show-name').innerHTML = player2name;
+            document.getElementById('player-1-show-name').innerHTML = 'Name: '+player1name;
+            document.getElementById('player-2-show-name').innerHTML = 'Name: '+player2name;
         break;
         case 3:
             var player1name = document.getElementById('player1-name').value;
@@ -168,9 +167,9 @@ function getPlayerNames(){
             document.getElementById('player1-name').remove();
             document.getElementById('player2-name').remove();
             document.getElementById('player3-name').remove();
-            document.getElementById('player-1-show-name').innerHTML = player1name;
-            document.getElementById('player-2-show-name').innerHTML = player2name;
-            document.getElementById('player-3-show-name').innerHTML = player3name;
+            document.getElementById('player-1-show-name').innerHTML = 'Name: '+player1name;
+            document.getElementById('player-2-show-name').innerHTML = 'Name: '+player2name;
+            document.getElementById('player-3-show-name').innerHTML = 'Name: '+player3name;
         break;
         case 4:
             var player1name = document.getElementById('player1-name').value;
@@ -185,10 +184,10 @@ function getPlayerNames(){
             document.getElementById('player2-name').remove();
             document.getElementById('player3-name').remove();
             document.getElementById('player4-name').remove();
-            document.getElementById('player-1-show-name').innerHTML = player1name;
-            document.getElementById('player-2-show-name').innerHTML = player2name;
-            document.getElementById('player-3-show-name').innerHTML = player3name;
-            document.getElementById('player-4-show-name').innerHTML = player4name;
+            document.getElementById('player-1-show-name').innerHTML = 'Name: '+player1name;
+            document.getElementById('player-2-show-name').innerHTML = 'Name: '+player2name;
+            document.getElementById('player-3-show-name').innerHTML = 'Name: '+player3name;
+            document.getElementById('player-4-show-name').innerHTML = 'Name: '+player4name;
         break;
     }
     

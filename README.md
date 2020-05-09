@@ -15,7 +15,7 @@
       * It has some other functions that will make you angry (messed up buttons, not working ones and mixed links).
     The purpose of the non usual website:
       * I think that if you know how to make something work and in the wrong way and still be fun you can make it work right.
-   ## [Blackjack](https://amazing-lovelace-379311.netlify.app/)
+   ## [Blackjack](https://blackjack-aed.netlify.app/)
     * A simple game of BlackJack 
     * You play agains a computer wich after your turn is ready starts collecting cards for himself and desides weather to stop or not.
     * After the computer is ready the to scores are being calclulated and the winner is being displayed
@@ -25,7 +25,7 @@
   ## RandomButtonColor
     * Simple app that gives the button random colors.
     * It always remembers what was their original color and can revert to it.
-  ## [RockPaperScissorsGame](https://eager-golick-54590a.netlify.app/)
+  ## [RockPaperScissorsGame](https://rock-paper-scissors-aed.netlify.app/)
     * Simple traditional rock, paper, scissors game.
     * This functions normally unlike in the 'Angry Website'.
     * You pick you choise and it displays on the left and in the right you get the Pc's choice and after that a winner is being choosed.
@@ -33,7 +33,7 @@
     * App that on button click add spider gif images on the screen.
     * The other button clears them.
     * I learned dom manipulating images and using flexboxes when div's are being added dynamically.
- ## NoDiceBoardGame
+ ## [NoDiceBoardGame](https://board-game-aed.netlify.app/)
     * The idea of the game first came in 2020 Plovdiv Game Jam and me and my team decided to make it on Unity and presented it. I wanted to try and make the same game or at least something simmilar but played in the browser.
     * I started and whithin a couple of days i managed to make it work almost the same.
     * It starts with you choosing how many players you want to play with (2-4 players).
